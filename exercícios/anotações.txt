@@ -1,0 +1,139 @@
+        JAVASCRIPT
+
+Aula 06:
+
+Concatenação: 
+
+Plus: Utiliza-se o (+)
+Teamplate string: A mensagem (texto), deve estar entre crase e não aspas, com a variável desejada com cifrão na frente e entre chaves, exemplo window.alert(`...texto qualquer: ${variável}`)
+___________________________________________
+OBSERVAÇÃO: Sempre os dados oriundo do window.prompt irá retornar uma string, logo:
+
+Transformação de string para number:
+Há dois tipos de number, inteiro e float, logo
+
+    Number.parceInt(n) - Para número inteiro
+    Number.parceFloat(n) - Para número real
+    Ou apenas trabalhar com, Number(n), exemplo:
+        let n1 = Number.parceFloat(window.prompt('Informe o 1° número Srº(a) '+nome+': '))
+        let n2 = Number(window.prompt('Srº(a) '+nome+', informe o 2° número: '))
+
+        Obeserve que no caso 2 (n2), utilizo apenas o "Number", assim já transformando a string em número.
+
+    Obs: Não é necessário colocar o "Number" sempre quando necessitar transformar logo apenas, parceInt(n) ou parceFloat(n).
+___________________________________________
+
+Transformação de Number para String:
+
+    String(n)
+    n.toString()
+
+Seguindo o mesmo princípio do Number -> String. Exemplo: 
+        window.alert('O somatório de ambos os números é: '+ soma.toString())
+        OU
+        window.alert('O somatório de ambos os números é: '+ String(soma))
+
+___________________________________________
+
+Componentes para tratamento de dados
+
+String:
+variavel.toUpperCase() -> Transforma todos os caracteres do dado em maiúsculos
+variavel.length -> Contagem de caracteres do dado dentro da variável.
+variavel.toLowerCase() -> Transforma todos os caracteres do dado em minúsculos.
+
+Number:
+n1.toFixed(3) -> Faz com que haja 3 números de casas decimais fixados.
+n1.toFixed.replace('.', ',') -> Muda a sintáxe de '.' para ',' (ponto para virgula)
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> Traz a caracteristica de um determinado local geográfico que neste caso é o Brasil em sua moeda local (Real - R$)
+___________________________________________
+
+Operadores:
+
+    Aritmétricos: ("+" Soma | "-" Substração | "*" Multiplicação | "/" Divisão | "%" Resto da divisão inteira | "**" Elevado a Potência):
+
+        Operadores matemáticos, obdecendo a ordem de precedência da matématica, parênteses -> potência -> multiplicação, divisão, resto -> soma, subtração, respectivamente.
+        (n = n + 4) = (n += 4)
+
+    Atribuição: Como na linguagem C
+        (n = n + 4) == (n += 4)
+        (n = n - 2) == (n -= 2)
+        (n = n * 7) == (n *= 7)
+        (n = n / 5) == (n /= 5)
+        (n = n ** 3) == (n **= 3)
+        (n = n % 6) == (n %= 6)
+
+        Incremento:
+            Pós-incremento;
+                n++ == n = n+1
+                n-- == n = n-1
+                (Incrementa mas não aparece no momento do incremento, apenas é salvo)
+            Pré-incremento;
+                ++n == 1+n = n 
+                --n == 1-n = n
+                (Aparece o incremento)
+
+    Relacionais:
+        Como na linguagem C, utiliza-se a mesma sintáxe;
+            < (menor que) | > (maior que)
+            <= (menor ou igual que) | >= (maior ou igual que)
+            == (Igualdade) | != (Diferete que)
+            === (...é indentico a...) - Compara valores, grandezas e tipagem.
+            !== (Desigual restrito)
+
+    Lógicos:
+
+        Como na linguagem C, utiliza-se a mesma sintáxe. ("!" | "&&" | "||" )
+            ! - Negação
+            && - e (conjução)
+            || - ou (disjunções)
+
+OBSERVAÇÃO: A ordem em que o programa irá resolver é: 
+            1° Operadores Aritmétricos -> 2° Operadores Relacionais -> 3° Operadores Lógicos
+
+    Ternário:
+        É uma operação condicional, na linguagem C, tratamos com IF e ELSE IF e ELSE
+
+    Typeof: (ESTUDAR POSTERIORMENTE)
+
+___________________________________________
+
+    DOM - Document Object Model
+        Ferramenta que é um conjunto de objetos dentro do navegador que faz o tratamento de componente visuais
+
+    Árvore DOM:
+        É um conjunto de objetos onde há objetos como;
+            
+            window:
+                location:
+                document:
+                    HTML:
+                        head:
+                            meta
+                            title
+                        body:
+                            h1:
+                            p:
+                                strong
+                            div:
+                history:
+
+        Seleção por elementos: Elementos são qualquer objeto
+
+            Por Marca:
+                getElementsByTagName()[]
+
+            Por ID:
+                getElementById()
+            Por Nome:
+                getElementsByName()[]
+            Por Classe:
+                getElementsByClassName()
+            Por Seletor:
+                querySelector()
+                querySelectorAll()
+
+
+Extenções Uteis:
+    -Live Server
+    -Node.JS Exec
