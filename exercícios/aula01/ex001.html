@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Aula, aula04</title>
+    <style>
+        body {
+            background-color: rgba(140, 245, 140, 0.829);
+            color: rgb(0, 0, 0);
+        }
+        h1 {
+            color: red;
+        }
+        p {
+            text-decoration: underline;
+            font-weight:300;
+            margin-left: 2em;
+            font-size: 1em;
+        }
+        ul {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 04</h1>
+    <p>Primeira aula, desenvolvimento em JS</p>
+    <ol>
+        <li>Abrindo programa em html</li>
+        <li>Relembrando CSS</li>
+        <li>Aplicando o comando de alerta na página, utilizando window.alert('mensagem') - Dentro do <code>script</code></li>
+        <p>O <code>window.alert('alguma_coisa')</code> serve para criar uma mensagem de alerta no momento que se abre o site no navegador com a mensagem de escolha. </p>
+        <li>Aplicando o comando para obter duas respostas possíveis, útil para perguntas simples, utilizando o <code>window.confirm</code></li>
+        <p>Como no window.alert, o <code>window.confirm</code> abre uma janela no momento da abertura da página com duas possíveis respostas. Bastante utilizado em solicitação de permissões e perguntas simples com a sintáxe <code>window.confirm('alguma_pergunta?')</code></p>
+        <li>Aplicando o comando de abertura de caixa de texto, <code>window.prompt('')</code></li>
+        <p>Como os comandos anteriores o <code>window.prompt</code> também abrirá uma caixa de mensagem seguida com a possibilidade de inserção de uma resposta digitada em uma caixa de texto, útil para a necessidade de uma resposta mais detalhada</p>
+        <li>Variáveis e Tipos Primitivos:</li>
+        <p>Como em outras linguagem já vista, exemplo de C, variáveis do tipo string (cadeia), número (não há diferença entre inteiro e float) e também há o tipo booleano que como o C é verdadeiro ou falso (true or false).<br>Sinal em que a variável recebe um valor (=) igualmente ao C<br>A string deve estar também entre aspas (a depender do caso entre aspas duplas, simples ou crases)</p>
+        <ul>
+            <li>String:</li>
+            <li>Number:</li>
+            <p>Para o number há dois valores internos importantes, como o <strong>Infinity</strong> e <strong>NaN</strong></p>
+            <li>Boolean:</li>
+        </ul>
+    </ol>
+    <script>
+       /* window.alert('Minha primeira mensagem!') // Para criar apenas um alerta no momento que abrir o site
+        window.confirm('Bahia é o mundo?') // Criar uma caixa útil para perguntas com 2 respostas possíveis
+        */let nome = window.prompt('Qual é o seu nome?') // Abre uma caixa de texto para o usário inserir alguma informação (string)
+        window.alert(`Seja bem-vindo Srº(a) ${nome}!`) // Utilizando a crase no window.alert, possibilita a utilização da variável dentro da mensagem
+ // Abre uma caixa de texto para o usário inserir alguma informação (string)
+    </script>
+</body>
+</html>
