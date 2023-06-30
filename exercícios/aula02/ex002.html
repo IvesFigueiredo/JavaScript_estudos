@@ -1,0 +1,67 @@
+<!--Neste exercício o apredizado foi em salvar dados em uma variável e realizar cálculos númericos, transformando do tipo string em número 
+e concatenação no estilo "Teamplate String", informações essas oriunda do prompt (window.prompt)-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Aula, aula04</title>
+    <style>
+        body {
+            background-color: rgba(140, 245, 140, 0.829);
+            color: rgb(0, 0, 0);
+        }
+        h1 {
+            color: red;
+        }
+        p {
+            text-decoration: underline; /*Comentário em CSS*/
+            font-weight:300;
+            margin-left: 2em;
+            font-size: 1em;
+        }
+        ul {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 04</h1>
+    <p>Primeira aula, desenvolvimento em JS</p> <!--Comentário em HTML-->
+    <ol>
+        <li>Abrindo programa em html</li>
+        <li>Relembrando CSS</li>
+        <li>Aplicando o comando de alerta na página, utilizando window.alert('mensagem') - Dentro do <code>script</code></li>
+        <p>O <code>window.alert('alguma_coisa')</code> serve para criar uma mensagem de alerta no momento que se abre o site no navegador com a mensagem de escolha. </p>
+        <li>Aplicando o comando para obter duas respostas possíveis, útil para perguntas simples, utilizando o <code>window.confirm</code></li>
+        <p>Como no window.alert, o <code>window.confirm</code> abre uma janela no momento da abertura da página com duas possíveis respostas. Bastante utilizado em solicitação de permissões e perguntas simples com a sintáxe <code>window.confirm('alguma_pergunta?')</code></p>
+        <li>Aplicando o comando de abertura de caixa de texto, <code>window.prompt('')</code></li>
+        <p>Como os comandos anteriores o <code>window.prompt</code> também abrirá uma caixa de mensagem seguida com a possibilidade de inserção de uma resposta digitada em uma caixa de texto, útil para a necessidade de uma resposta mais detalhada<br>Para a sua utilização precisamos salvar o dado inserido em uma variável.</p>
+        <ol type="i">
+            <li>Para declarar uma variável há 03 possibilidades, <code>var</code>, <code>let</code> e <code>const</code>, o VAR caiu em desuso por ser possível declarar diversas vezes a variável, e entra a utilização do LET pois não necessita declarar a variável e o nome da mesma, apenas o chamado do nome o programa entende que seja uma variável, por exemplo, <code>var nome = "Ives"</code>, para outro momento seria necessário chama-lo <code>var nome = "Fulano"</code><br>No caso do LET não é necessário, basta apenas uma única vez, exemplo;<br><code>let nome = "Ives"</code>, posteriormente basta chamar o nome da variável, <code>nome = "Fulano"</code></code></li>
+            <li>Concatenação no JavaScript utiliza-se, "+",Exemplo: window.alert('Seja bem-vindo Srº(a) ' + nome + '!')<br>Ou o chamado "Template String" que usa-se o acentro crase ao invés de aspas para definir a string. Para isso deve cercar a variável com chaves{} e inserir o símbolo cifrão antes. Exemplo: <code>window.alert(`Seja bem-vindo Srº(a) ${nome}!`)</code></li>
+        </ol>
+        <li>Variáveis e Tipos Primitivos:</li>
+        <p>Como em outras linguagem já vista, exemplo de C, variáveis do tipo string (cadeia), número (não há diferença entre inteiro e float) e também há o tipo booleano que como o C é verdadeiro ou falso (true or false).<br>Sinal em que a variável recebe um valor (=) igualmente ao C<br>A string deve estar também entre aspas (a depender do caso entre aspas duplas, simples ou crases)</p>
+        <ul>
+            <li>String:</li>
+            <li>Number:</li>
+            <p>Para o number há dois valores internos importantes, como o <strong>Infinity</strong> e <strong>NaN</strong></p>
+            <p>Transformação de string para number:<br>     <code>number.parseInt(n)</code> Para transformar em número inteiro.<br>     <code>number.parceFloat(n)</code> Para transformar em número real.<br></p>
+            <li>Boolean:</li>
+        </ul>
+    </ol>
+    <script> // Comentário em JS
+        window.alert('Realizar um cálculo simples de soma.')
+        let nome = window.prompt('Informe o seu nome: ')
+        window.alert('Seja bem-vindo Srº(a) '+nome+ '!') //Utilizando a concatenização PLUS (+) 
+        let n1 = Number(window.prompt(`Informe o 1° número Srº(a) ${nome}: `)) //OBS: em window.prompt sempre retornará uma string
+        let n2 = parseFloat(window.prompt(`Srº(a) ${nome}, informe o 2° número: `)) //Não é necessário declarar o "Number".parceFloat ou "Number".parceInt
+        let soma = n1 + n2 
+        window.alert(`O somatório de ${n1} + ${n2} é: ${soma}`)
+        //(number '+' number) para adição
+        //(string '+' string) para concatenação
+    </script> 
+</body>
+</html>
