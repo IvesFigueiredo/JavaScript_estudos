@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto:wght@100;400;500;700&display=swap');
+
+        body {
+            background-color: rgb(10, 73, 2);
+            color: white;
+            font-family: 'Roboto', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id = "msg">Clique em mim</div>
+    <h2>@Ives Figueiredo</h2>
+    <span name = "name">Qualquer coisa</span>
+    <div id = "s">Utilizando o querySelector(), forma mais usual hoje, id=# | class=.</div>
+
+    <script>
+        let p1 = window.document.getElementsByTagName('p')[0] // Selecionando o parágrafo da posição [0] que é o primeiro, no caso segue o mesmo princípio de vetor
+        window.document.write('<br>Tratando o 1° Parágrafo com window.document.write utilizando uma variável recebendo via getElementsByTagName do parágrafo da 1° posição: ' + p1.innerText) //innerText É o texto inserido no parágrafo
+        p1.style.color = 'gray'
+        let meu = window.document.getElementsByTagName('h2')[0]
+        meu.style.color = 'black'
+        let d = document.getElementById('msg')
+        d.style.background = 'lightgray'
+        d.style.color = 'darkred'
+        d.style.fontWeight = 'bold'
+        d.innerText ='Escrevendo esta "div" via JS...'
+
+        let name = document.getElementsByName('name')[0]
+        name.style.background = 'pink'
+        name.innerText ='Olá! (com SPAN)'
+        
+        let s = document.querySelector('div#s')
+        s.style.background = 'gold'
+        s.style.color ='darkblue'
+    </script>
+</body>
+
+</html>
