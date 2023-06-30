@@ -1,0 +1,26 @@
+<!--Neste exercício apliquei comando onde salvo o um dado via prompt (window.prompt) em uma variável e em seguida utilizei para mostrar em HTML e aplicando 
+alguns tratamentos na string, por exemplo, por os caracteres em maiúsculos, minúsculos, contagem de caracteres inseridos -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let nome = window.prompt("Qual o seu nome?")
+        document.write(`Olá Srº(a) <strong>${nome}</strong>! O seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em letras maiúsculas: <strong>${nome.toUpperCase()}.<br></strong>`)
+        document.write(`<strong>${nome}</strong>, o seu nome em minúsculo é <strong>${nome.toLowerCase()}</strong>`)
+
+    </script>
+</body>
+</html>
